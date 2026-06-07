@@ -1,0 +1,316 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Project palette
+     Primary/Tertiary: Rich Navy (#0f1e36, #1a2536), Deep Charcoal
+     Secondary/Accent: Premium Gold (#d4af37, #c5a059, #cda250)
+  */
+  --background: #ffffff;
+  --foreground: #111622; /* deep charcoal / navy text */
+
+  --card: #ffffff;
+  --card-foreground: #111622;
+
+  --popover: #ffffff;
+  --popover-foreground: #111622;
+
+  /* Primary (Rich Navy) */
+  --primary: #0f1e36;
+  --primary-foreground: #ffffff;
+
+  /* Secondary (Warm Gold) */
+  --secondary: #c5a059;
+  --secondary-foreground: #ffffff;
+
+  /* Accent mapped to metallic gold */
+  --accent: #d4af37;
+  --accent-foreground: #0f1e36;
+
+  /* Optional explicit tertiary gold token */
+  --tertiary: #cda250;
+  --tertiary-foreground: #ffffff;
+
+  /* Additional complementary accents */
+  --accent-2: #1e293b; 
+  --accent-3: #e2c98d; 
+  --info: #3B82F6; /* blue-500 */
+  --success: #10B981; /* emerald-500 */
+  --warning: #F59E0B; /* amber-500 */
+
+  --muted: #f8fafc; /* subtle background */
+  --muted-foreground: #4b5563; /* slate-600 */
+
+  --destructive: #ef4444; /* red-500 */
+  --destructive-foreground: #ffffff;
+
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: var(--primary);
+
+  /* Charts follow brand */
+  --chart-1: #0f1e36;
+  --chart-2: #d4af37;
+  --chart-3: #c5a059;
+  --chart-4: #1e293b;
+  --chart-5: #F59E0B;
+
+  --radius: 0.75rem;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111622;
+  --sidebar-primary: #e2c98d;
+  --sidebar-primary-foreground: #111622;
+  --sidebar-accent: #0f1e36;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: var(--primary);
+}
+
+/* Enhanced dark mode with professional navy & gold color scheme */
+.dark {
+  --background: #070c14; /* very deep navy */
+  --foreground: #f3f4f6;
+
+  --card: #0c1220;
+  --card-foreground: #f3f4f6;
+
+  --popover: #0c1220;
+  --popover-foreground: #f3f4f6;
+
+  --primary: #c5a059; /* gold */
+  --primary-foreground: #070c14;
+
+  --secondary: #0f1e36; /* navy */
+  --secondary-foreground: #f3f4f6;
+
+  --muted: #0c1220;
+  --muted-foreground: #9ca3af;
+
+  --accent: #d4af37; /* bright gold */
+  --accent-foreground: #070c14;
+
+  --accent-2: #1e293b;
+  --accent-3: #e2c98d;
+  --info: #60A5FA;
+  --success: #34D399;
+  --warning: #FBBF24;
+
+  --destructive: #f87171;
+  --destructive-foreground: #070c14;
+
+  --border: #1a2333;
+  --input: #070c14;
+  --ring: var(--primary);
+
+  --chart-1: #c5a059;
+  --chart-2: #0f1e36;
+  --chart-3: #d4af37;
+  --chart-4: #1e293b;
+  --chart-5: #FBBF24;
+
+  --sidebar: #070c14;
+  --sidebar-foreground: #f3f4f6;
+  --sidebar-primary: #0c1220;
+  --sidebar-primary-foreground: #f3f4f6;
+  --sidebar-accent: #d4af37;
+  --sidebar-accent-foreground: #070c14;
+  --sidebar-border: #1a2333;
+  --sidebar-ring: var(--primary);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Added custom animations and enhanced base styles */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Smooth transitions for all interactive elements */
+  button,
+  a,
+  [role="button"] {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Enhanced focus states */
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+/* Custom animation keyframes for enhanced user experience */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  @apply transition-all duration-300 ease-out;
+}
+
+.hover-lift:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+.hover-glow:hover {
+  @apply shadow-lg shadow-primary/25;
+}
+
+/* Glass morphism effects */
+.glass {
+  @apply backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border border-white/20 dark:border-gray-700/20;
+}
+
+.glass-card {
+  @apply backdrop-blur-sm bg-white/90 dark:bg-gray-900/90 border border-white/30 dark:border-gray-700/30;
+}
+
+/* Gradient text utilities */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+}
+
+.gradient-text-hero {
+  @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+}
+
+/* Lighter gradient for hero over video */
+.gradient-text-hero-light {
+  @apply bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent;
+}
+
+/* Brand gradient (#d4af37 -> #e2c98d -> #ffffff) for hero heading */
+.gradient-text-hero-brand {
+  @apply bg-gradient-to-r from-[#d4af37] via-[#e2c98d] to-white bg-clip-text text-transparent;
+}
+
+/* Page-scoped tile accent helper using CSS color-mix for subtle shading */
+.tile-accent {
+  border-width: 1px;
+  border-color: color-mix(in srgb, var(--tile-accent, var(--primary)) 15%, transparent);
+  background-color: color-mix(in srgb, var(--tile-accent, var(--primary)) 6%, transparent);
+}

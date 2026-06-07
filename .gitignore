@@ -1,0 +1,30 @@
+# Dependency directories
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Python Virtual Environments & Caches
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local configuration files / Secrets (CRITICAL: Prevents committing SMTP credentials)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Operating System Files
+.DS_Store
+Thumbs.db

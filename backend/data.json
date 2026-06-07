@@ -1,0 +1,126 @@
+{
+  "users": [
+    {
+      "email": "user@example.com",
+      "password": "password123",
+      "role": "patient",
+      "phone": "",
+      "num_meds_requested": 0,
+      "pending_approval_meds": [],
+      "id": 1,
+      "created_at": "2026-05-18T03:34:00.235639"
+    }
+  ],
+  "medicines": [
+    {
+      "id": 1,
+      "name": "Amoxicillin 500mg",
+      "generic_name": "Amoxicillin",
+      "description": "Antibiotic used to treat bacterial infections.",
+      "created_at": "2026-05-18T00:00:00.000Z",
+      "expire_at": "2027-06-01",
+      "current_demand": 0,
+      "required_demand": 20
+    },
+    {
+      "id": 2,
+      "name": "Ibuprofen 200mg",
+      "generic_name": "Ibuprofen",
+      "description": "NSAID pain reliever and fever reducer.",
+      "created_at": "2026-05-18T00:00:00.000Z",
+      "expire_at": "2027-12-31",
+      "current_demand": 0,
+      "required_demand": 20
+    },
+    {
+      "id": 3,
+      "name": "Metformin 500mg",
+      "generic_name": "Metformin",
+      "description": "Type 2 diabetes medication to control blood sugar.",
+      "created_at": "2026-05-18T00:00:00.000Z",
+      "expire_at": "2028-03-15",
+      "current_demand": 0,
+      "required_demand": 25
+    },
+    {
+      "id": 4,
+      "name": "Insulin Glargine (Lantus) 100 units/mL",
+      "generic_name": "Insulin Glargine",
+      "description": "Long-acting insulin for diabetes management.",
+      "created_at": "2026-05-18T00:00:00.000Z",
+      "expire_at": "2027-02-10",
+      "current_demand": 0,
+      "required_demand": 30
+    },
+    {
+      "id": 5,
+      "name": "Napa Paracetamol 300mg",
+      "generic_name": "Napa Paracetamol",
+      "description": "Pain relief and fever treatment.",
+      "created_at": "2026-05-18T00:00:00.000Z",
+      "expire_at": "2027-09-01",
+      "current_demand": 0,
+      "required_demand": 15
+    },
+    {
+      "id": 6,
+      "name": "Trastuzumab (Herceptin) 150mg",
+      "generic_name": "Trastuzumab",
+      "description": "Breast cancer monoclonal antibody therapy.",
+      "created_at": "2026-05-18T00:00:00.000Z",
+      "expire_at": "2027-08-20",
+      "current_demand": 0,
+      "required_demand": 22
+    },
+    {
+      "id": 7,
+      "name": "Pembrolizumab (Keytruda) 100mg",
+      "generic_name": "Pembrolizumab",
+      "description": "Immunotherapy for oncology treatments.",
+      "created_at": "2026-05-18T00:00:00.000Z",
+      "expire_at": "2027-11-11",
+      "current_demand": 0,
+      "required_demand": 18
+    }
+  ],
+  "wishlists": [],
+  "donations": [],
+  "grants": [],
+  "profiles": [
+    {
+      "first_name": "Cricket",
+      "last_name": "",
+      "phone": "",
+      "address": "",
+      "emergency_contact": "",
+      "date_of_birth": "",
+      "bio": "",
+      "medical_conditions": [],
+      "allergies": [],
+      "user_id": 1,
+      "id": 1,
+      "created_at": "2026-05-18T03:34:00.652617",
+      "avatar_url": "/profile-pics/1-1779098815688.jpg"
+    }
+  ],
+  "counters": [],
+  "notifications": [],
+  "transactions": [],
+  "demoData": [],
+  "meta": {
+    "counters": {
+      "users": 1,
+      "medicines": 7,
+      "wishlists": 0,
+      "donations": 0,
+      "grants": 0,
+      "profiles": 1,
+      "counters": 0,
+      "demoData": 0,
+      "notifications": 0,
+      "transactions": 0,
+      "micro_grants": 0
+    }
+  },
+  "micro_grants": []
+}
