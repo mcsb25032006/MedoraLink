@@ -240,4 +240,4 @@ To deploy the application online, use **Render** (for the Flask backend) and **V
 1. Import your repository on Vercel.
 2. Edit **Root Directory** to point to **`frontend`**.
 3. In **Environment Variables**, add:
-   * `NEXT_PUBLIC_API_URL` = `https://medora-link-backend.onrender.com` *(Your Render URL)*
+   * `NEXT_PUBLIC_API_URL` = `https://medoralink.onrender.com` *(Your Render URL)*
