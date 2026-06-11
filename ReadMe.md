@@ -1,9 +1,32 @@
 # 💙 MedoraLink
+
+<div align="center">
+
+### 🚀 Live Production Deployment
+
+[![Live App on Vercel](https://img.shields.io/badge/Live%20Demo-Vercel%20%26%20Render-blue?style=for-the-badge&logo=vercel&logoColor=white&labelColor=000000)](https://medora-link.vercel.app)
+
+**🔗 Access the live app here: [https://medora-link.vercel.app](https://medora-link.vercel.app)**
+
+---
+
 ### *Connecting Communities to Affordable Healthcare*
 
-MedoraLink is a modern, community-driven healthcare accessibility platform designed to reduce medical waste, lower prescription drug costs, and provide compassionate AI-powered health guidance. 
+MedoraLink is a modern, community-driven healthcare accessibility platform designed to reduce medical waste, lower prescription drug costs, and provide compassionate AI-powered health guidance.
 
-By combining community donations, bulk-order group splitting, micro-grants, and licensed doctor verification, MedoraLink ensures that **essential medication is never out of reach due to financial barriers.**
+[![Next.js](https://img.shields.io/badge/Next.js%2014-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Flask](https://img.shields.io/badge/Flask%20(Python)-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Google Gemini](https://img.shields.io/badge/Google_Gemini_AI-8E75C2?style=flat-square&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+[![SendGrid](https://img.shields.io/badge/SendGrid_API-0096FF?style=flat-square&logo=sendgrid&logoColor=white)](https://sendgrid.com/)
+
+</div>
+
+---
+
+> [!NOTE]
+> By combining community donations, bulk-order group splitting, micro-grants, and licensed doctor verification, MedoraLink ensures that **essential medication is never out of reach due to financial barriers.**
 
 ---
 
@@ -23,9 +46,9 @@ By combining community donations, bulk-order group splitting, micro-grants, and 
 | Layer | Technologies | Purpose |
 | :--- | :--- | :--- |
 | **Frontend** | Next.js 14 (App Router), React 18, Tailwind CSS, TypeScript | Highly responsive user interface with rich HSL theme |
-| **Backend** | Python, Flask, Flask-CORS, python-dotenv, Gunicorn | Lightweight RESTful routing and logic server |
-| **Database** | Simulated JSON Database (`data.json`) | File-based prototype DB with automatic auto-increment ID counters |
-| **Email API** | SendGrid v3 HTTP API | Secure domain-less email delivery for password resets |
+| **Backend** | Python, Flask, Flask-SQLAlchemy, python-dotenv | Lightweight RESTful routing and logic server |
+| **Database** | SQLite (dev) / PostgreSQL (prod) | Robust object-relational mapping data layer |
+| **Email API** | SendGrid v3 HTTP API / Resend API | Secure domain-less email delivery for password resets |
 | **AI Engine** | Google Gemini Generative AI SDK | Chatbot support, translation, and text summarization |
 | **Hosting** | Vercel (Frontend), Render Free Tier (Backend) | Live production hosting |
 
@@ -37,7 +60,7 @@ By combining community donations, bulk-order group splitting, micro-grants, and 
 graph TD
     Client["🌐 Browser Client (Tailwind / Next.js)"] <-->|HTTPS / JSON REST API| Frontend["⚡ Next.js Frontend (Vercel)"]
     Frontend <-->|CORS Enabled Requests| Backend["🐍 Flask Backend (Render)"]
-    Backend <-->|Read / Write CRUD operations| DB["📂 data.json (Simulated DB)"]
+    Backend <-->|Read / Write CRUD operations| DB["📂 SQL Database"]
     Backend -->|HTTPS API Mail Request| SendGrid["📧 SendGrid Mail Service"]
     Backend -->|AI Prompt Generation| Gemini["🤖 Google Gemini AI"]
     SendGrid -.->|SMTP Bypass Delivery| Gmail["📬 User Gmail Inbox"]
@@ -201,7 +224,7 @@ npm run dev
 
 ## ☁️ Online Deployment Setup (Production)
 
-To share the application with your friends online, use **Render** (for the Flask backend) and **Vercel** (for the Next.js frontend).
+To deploy the application online, use **Render** (for the Flask backend) and **Vercel** (for the Next.js frontend).
 
 ### 1. Render Deployment (Backend)
 1. Set the **Root Directory** settings to **`backend`**.
